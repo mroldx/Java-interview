@@ -5,12 +5,17 @@
 #3、Netty是怎么运行的?
 
 #4、NIO的组成有哪些？
+
 Channels
+
 Buffers
+
 Selectors
+
 虽然Java NIO 中除此之外还有很多类和组件，但在我看来，Channel，Buffer 和 Selector 构成了核心的API。其它组件，如Pipe和FileLock，只不过是与三个核心组件共同使用的工具类。因此，在概述中我将集中在这三个组件上。其它组件会在单独的章节中讲到。
 
 Channel 和 Buffer
+
 基本上，所有的 IO 在NIO 中都从一个Channel 开始。Channel 有点象流。 数据可以从Channel读到Buffer中，也可以从Buffer 写到Channel中。这里有个图示：
 
 技术分享
@@ -245,7 +250,7 @@ tcp为提高性能，发送端会将需要发送的数据发送到缓冲区，�
 
 接收方法不及时读取套接字缓冲区数据，这将发生粘包。
 
-……
+
 #9、Netty的零拷贝实现？因及解决方法？
 
 #10、Netty的高性能表现在哪些方面？

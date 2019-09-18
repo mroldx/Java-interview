@@ -174,7 +174,8 @@ sdiff yourSet mySet
 
 ​	[Redis_Set详情](https://redisbook.readthedocs.io/en/latest/datatype/set.html)
 
-## 5、Sorted Set【ZSet】
+## 5、Sorted Set【ZSet】 如何实现？ 这种数据结构在极端情况下可能有什么问题？
+
 
 sorted set 是排序的 set，去重但可以排序，写进去的时候给一个分数，自动根据分数排序。
 
@@ -447,7 +448,9 @@ class LRUCache {
 
   ​	但实际上持久化会对Redis的性能造成非常严重的影响，如果一定需要保存数据，那么数据就不应该依靠缓存来保存，建议使用其他方式如mysql数据库。所以Redis的持久化意义不大。
 
-
+  **redis回收和备份**
+  
+  **Redis IO 模型**
 
 # 八、Redis与memcached的区别
 
@@ -464,8 +467,12 @@ redis能支持五大数据结构及其相关操作，而memcached只支持简单
 ## 3、性能对比
 
 由于 redis 只使用单核【单线程】，而 memcached 可以使用多核【多线程】，所以平均每一个核上 redis 在存储小数据时比 memcached 性能更高。而在 100k 以上的数据中，memcached 性能要高于 redis，虽然 redis 最近也在存储大数据的性能上进行优化，但是比起 memcached，还是稍有逊色。
+# 九．redis 和 MongoDB 的区别。几个概念对比，
+##　1.几个概念对比
 
-# 九、缓存与面试
+##　2.底层实现
+
+# 十、缓存与面试
 
 [**缓存细节及其面试套路**](https://doocs.github.io/advanced-java/#/README?id=%E7%BC%93%E5%AD%98)
 
